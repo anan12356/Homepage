@@ -18,7 +18,7 @@
 	function disSpeak(){
 		document.getElementsByName("speak")[0].innerHTML = "Reveal…"
 	}
-	var willsetstories = ["This is a story example. A story is a paragragh but not that long.","The stories are about our class.","Capability and flexibility test.<br/><br/><br/><input type='text' placeholder='You can type here'/>"];
+	var willsetstories = [];
 	var storyindex = -1;
 	function changeStory(){
 		storyindex == willsetstories.length - 1 ? function(){storyindex = 0}() : function(){storyindex += 1}();
@@ -33,7 +33,7 @@
 		height:100px;
 		background:#FF2200;
 		border-top-left-radius:10px;
-		-webkit-animation:circle 3s 5s 3 linear;
+		-webkit-animation:circle 5s infinite ease;
 		}
 		@-webkit-keyframes circle{
 		0% {transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);background-color:#FF2200}
