@@ -5,6 +5,20 @@
     <title>412 legend</title>
   </head>
   <body>
+	<script>
+	var willsetquotes = ["I am a HUMAN!", "I really don't know what this student is doing.", "月月", "指点江山", "Don't eat 'OLD BOOKS'!", "嘴巴不要啰"];
+	var quoteindex = 0;
+	function changeQuote(){
+		quoteindex == willsetquotes.length - 1 ? function(){quoteindex = 0}() : function(){quoteindex += 1}();
+		document.getElementsByName("quotes")[0].innerHTML = willsetquotes[quoteindex];
+	};
+	function changeSpeak(){
+		document.getElementsByName("speak")[0].innerHTML = "We are humans from Room 412!"
+	}
+	function disSpeak(){
+		document.getElementsByName("speak")[0].innerHTML = "Reveal…"
+	}
+	</script>
 	<style>
 		body{background-color:#222222}
 		#bl{
@@ -34,6 +48,19 @@
 		box-shadow: 10px 10px 5px 	#000000;
 		background-image:-webkit-linear-gradient(top,#333399,#333399,#111177);
 		}
+		#wb{
+		font-family:'palatino';
+		background-image:-webkit-linear-gradient(top,#EEEEEE,#EEEEEE,#BBBBBB);
+		color:#222222;
+		border-bottom-right-radius:20px;
+		border-top-left-radius:2px;
+		border-top-right-radius:2px;
+		border-bottom-left-radius:2px;
+		box-shadow: 10px 10px 5px 	#000000;
+		height:50px;
+		width:300px;
+		font-size:30px;
+		}
 	</style>
 	<div id="bl">
     <h1>
@@ -49,22 +76,23 @@
 	<br/>
 	<div id="w">
 		<h1>412 Classic Quotes</h1>
-		<p>
-		I am a HUMAN!<br/>
-		I really don't know what this student is doing.<br/>
-		月月😂
+		<p name="quotes">
+		I am a HUMAN!
 		</p>
+		<button onclick="changeQuote()" id="wb">NEXT ONE</button>
 	</div>
 	<br/>
 	<div id="b">
 	<p>
-	Coming soon...
+	<h2>WHO ARE WE? Speak out loud--</h2>
+	<h1 onmouseover="changeSpeak()" onmouseout="disSpeak()" name="speak">Reveal…</h1>
 	</p>
 	</div>
 	<p align="center" style="color:#444444;font-family:'Menlo'">
 	Proudly NOT powered by WordPress.<br/>
 	Or any other organization.<br/>
-	Developed by <strong>us</strong>.
+	Developed by <strong>us</strong>.<br/>
+	Star <a href="https://github.com/412LEGEND/Homepage" style="color:#444444">me</a> on GitHub to be mentioned of future uploads. 
 	<p>
   </body>
 </html>
